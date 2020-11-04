@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+  height: 100%;
+  overflow: hidden;
+}
+
+.monitor{
+    height: 30%;
+    padding: 10px 10px;
+}
+
+.monitor1{
+    background: white;
+    border: 7px solid rgb(71, 71, 71);
+    height: 100%;
+}
+
+.keyboard{
+    height: 70%;
+    padding: 0px 10px;
+}
+
+.keyboard1{
+    border: 1px solid red;
+    height: 100%;
+    border: 1px solid rgb(71, 71, 71);
+    
+}
