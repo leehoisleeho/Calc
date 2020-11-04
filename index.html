@@ -1,25 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes" /> 
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Calc</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-        <div class="monitor" id="monitor">
-           <div class="monitor1" id="monitor1"></div>
-        </div>
-       <div class="keyboard" id="keyboard">
-           <div class="keyboard1">
-               
-           </div>
-       </div>
-    
-    
-    <script src="./main.js">
 
-    </script>
+<body>
+    <div class="monitor" id="monitor">
+        <div class="monitor1" id="monitor1">
+            <div class="output" id="output">
+                0
+            </div>
+        </div>
+    </div>
+    <div class="keyboard" id="keyboard">
+        <div class="keyboard1">
+            <div class="item-1">
+                <div id="_1" onclick="Calc.clear()"> AC</div>
+            </div>
+            <div class="item-2">
+                <div id="_2">Del</div>
+            </div>
+            <div class="item-3">
+                <div id="_3">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-jiahao"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="item-4">
+                <div id="_4">
+                    <svg class="icon jianhao" aria-hidden="true">
+                        <use xlink:href="#icon-jianhao"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="item-5">
+                <div id="_5">
+                    1</div>
+            </div>
+            <div class=" item-6">
+                <div id="_6">2</div>
+            </div>
+            <div class="item-7">
+                <div id="_7">3</div>
+            </div>
+            <div class="item-8">
+                <div id="_8">
+                    <svg class="icon chenghao" aria-hidden="true">
+                        <use xlink:href="#icon-chenghao"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="item-9">
+                <div id="_9">4</div>
+            </div>
+            <div class="item-10">
+                <div id="_10">5</div>
+            </div>
+            <div class="item-11">
+                <div id="_11">6</div>
+            </div>
+            <div class="item-12">
+                <div id="_12">
+                    <svg class="icon chengbeifen" aria-hidden="true">
+                        <use xlink:href="#icon-chengbeifen"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="item-13">
+                <div id="_13">7</div>
+            </div>
+            <div class="item-14">
+                <div id="_14">8</div>
+            </div>
+            <div class="item-15">
+                <div id="_15">9</div>
+            </div>
+            <div class="item-16">
+                <div id="_16">=</div>
+            </div>
+            <div class="item-17">
+                <div id="_17" onclick="Calc.numBtn(0)">0</div>
+            </div>
+            <div class="item-18">
+                <div id="_18">.</div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="./main.js"> </script>
+    <script src="//at.alicdn.com/t/font_2181934_6bcy426kypm.js"></script>
 </body>
+
 </html>
