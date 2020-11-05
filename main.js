@@ -55,8 +55,7 @@ let Calc = {
     this.operator = ""
     document.getElementById("output").innerHTML = 0
   },
-
-
+  //delet方法
   del: function () {
     if (_value === this.value1) {
       let str = this.value1
@@ -73,7 +72,7 @@ let Calc = {
     }
   }
 }
-
+//给每个按钮，加入按下的样式和放开的样式
 let _1 = document.getElementById('_1').ontouchstart = function () {
   Calc.clear()
   document.getElementById('_1').style.boxShadow = 'inset 0px 0px 5px 1px #adacac'

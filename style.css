@@ -10,6 +10,10 @@
     fill: currentColor;
     overflow: hidden;
  }
+ @font-face{
+     font-family:'digifaw';
+     src:url("./font/digifaw.ttf") format("truetype");
+ }
 
 html,body{
   height: 100%;
@@ -38,11 +42,13 @@ html,body{
     display: flex  ;
     flex-direction: row-reverse;
     align-items: flex-end;
-    font-family: monospace;
-    font-size: 1rem;
+    font-family:'digifaw';
+    font-size: 1.2rem;
     overflow: hidden;
-    font-weight: 600;
+    color:#535353;
 }
+
+
 
 .keyboard{
     height: 70%;
@@ -155,7 +161,6 @@ html,body{
 
 .item-4{
     grid-area:d;
-    
     display: flex;
     justify-content: center;
     align-items: center;
