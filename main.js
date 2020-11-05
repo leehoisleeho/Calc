@@ -3,10 +3,10 @@ let width = document.body.scrollWidth
 document.write('<style>html{font-size:' + width / 10 + 'px; }</style>')
 
 let Calc = {
-  value1: '',
-  value2: '',
-  _value: '',
-  operator: "",
+  value1: '',//记录第一个输入的数字
+  value2: '',//记录按了运算符（+ — * /）后运算的数字
+  _value: '', //记录value1，value2的值，用来判断Delet时候，是value1还是value2
+  operator: "",  //设置运算符的初始值，用来判断，输入的是value1还是value2
   result: 0,
   numBtn: function numBtn(num) {
     if (this.operator === "") {
@@ -58,7 +58,6 @@ let Calc = {
 
 
   del: function () {
-
     if (_value === this.value1) {
       let str = this.value1
       str = str.substring(0, str.length - 1)
