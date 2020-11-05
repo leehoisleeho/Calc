@@ -3,22 +3,27 @@ let width = document.body.scrollWidth
 document.write('<style>html{font-size:' + width / 10 + 'px; }</style>')
 
 let Calc = {
-  value1: 0,
-  value2: 0,
+  value1: '',
+  value2: '',
+  _value: '',
   operator: "",
   result: 0,
   numBtn: function numBtn(num) {
     if (this.operator === "") {
-      this.value1 = this.value1 * 10 + num
+      this.value1 = this.value1 + num
+      _value = this.value1
+      console.log(_value)
       document.getElementById("output").innerHTML = this.value1
     } else {
-
-      this.value2 = this.value2 * 10 + num
+      this.value2 = this.value2 + num
+      _value = this.value2
       document.getElementById("output").innerHTML = this.value2
     }
   },
   opBtn: function (op) {
     if (op === "=") {
+      this.value1 = this.value1 - 0
+      this.value2 = this.value2 - 0
       switch (this.operator) {
         case "+": this.result = this.value1 + this.value2
           break;
@@ -36,7 +41,7 @@ let Calc = {
       }
       document.getElementById("output").innerHTML = this.result
       this.value1 = this.result;
-      this.value2 = 0;
+      this.value2 = '';
       this.operator = "";
       this.result = 0
     } else {
@@ -44,11 +49,29 @@ let Calc = {
     }
   },
   clear: function () {
-    this.value1 = 0
-    this.value2 = 0
+    this.value1 = ''
+    this.value2 = ''
     this.result = 0
     this.operator = ""
     document.getElementById("output").innerHTML = 0
+  },
+
+
+  del: function () {
+
+    if (_value === this.value1) {
+      let str = this.value1
+      str = str.substring(0, str.length - 1)
+      this.value1 = str
+      document.getElementById("output").innerHTML = this.value1
+      _value = this.value1
+    } else if (_value === this.value2) {
+      let str = this.value2
+      str = str.substring(0, str.length - 1)
+      this.value2 = str
+      document.getElementById("output").innerHTML = this.value2
+      _value = this.value2
+    }
   }
 }
 
@@ -61,7 +84,7 @@ _1 = document.getElementById('_1').ontouchend = function () {
 }
 
 let _2 = document.getElementById('_2').ontouchstart = function () {
-  Calc.numBtn(1)
+  Calc.del()
   document.getElementById('_2').style.boxShadow = 'inset 0px 0px 5px 1px #adacac'
 }
 _2 = document.getElementById('_2').ontouchend = function () {
@@ -85,7 +108,7 @@ _4 = document.getElementById('_4').ontouchend = function () {
 }
 
 let _5 = document.getElementById('_5').ontouchstart = function () {
-  Calc.numBtn(1)
+  Calc.numBtn('1')
   document.getElementById('_5').style.boxShadow = 'inset 0px 0px 5px 1px #adacac'
 }
 _5 = document.getElementById('_5').ontouchend = function () {
@@ -182,14 +205,14 @@ _16 = document.getElementById('_16').ontouchend = function () {
 
 let _17 = document.getElementById('_17').ontouchstart = function () {
   Calc.numBtn(0)
-  document.getElementById('_17').style.boxShadow = 'inset 0px 0px 5px 1px #adacac'
+  document.getElementById('_17').style.boxShadow = 'inset 0px 0px 15px 1px #adacac'
 }
 _17 = document.getElementById('_17').ontouchend = function () {
   document.getElementById('_17').style.boxShadow = ""
 }
 
 let _18 = document.getElementById('_18').ontouchstart = function () {
-
+  Calc.numBtn('.')
   document.getElementById('_18').style.boxShadow = 'inset 0px 0px 5px 1px #adacac'
 }
 _18 = document.getElementById('_18').ontouchend = function () {

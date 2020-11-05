@@ -40,6 +40,8 @@ html,body{
     align-items: flex-end;
     font-family: monospace;
     font-size: 1rem;
+    overflow: hidden;
+    font-weight: 600;
 }
 
 .keyboard{
@@ -424,20 +426,20 @@ html,body{
 
 #_18{
     grid-area:r;
-    background: #34A853;
+    /* background: #34A853; */
     text-align: center;
     width:2rem ;
     height:1.8rem ;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    
+    color: #5c5c5c;
+    background: white;
 }
 
 #_1,#_2,#_3,#_4,#_5,#_6,#_7,#_8,#_9,#_10,#_11,#_12,#_13,#_14,#_15,#_16,#_17,#_18{
     font-family: sans-serif;
-    border-radius: 10px;
+    border-radius:10px;
     font-weight: 600;
     box-shadow:0 0 7px #adacac
  }
