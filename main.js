@@ -39,7 +39,7 @@ let Calc = {
           }
           break;
       }
-      document.getElementById("output").innerHTML = Math.floor(this.result*100000)/100000  //保留小数点后5点
+      document.getElementById("output").innerHTML = Math.floor(this.result * 100000) / 100000  //保留小数点后5点
       this.value1 = this.result;
       this.value2 = '';
       this.operator = "";
